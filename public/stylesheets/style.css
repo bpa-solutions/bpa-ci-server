@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+}
+
+form {
+  text-align: center;
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.row+.row {
+  margin-top: 1rem;
+}
+
+.columns {
+  column-count: 2;
+}
+
+.columns img {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.card-link {
+  margin-top: 1em;
+}
+
+.ms-depth-4 h2 {
+  background-color: #004578;
+  color: white;
+}

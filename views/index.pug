@@ -1,0 +1,34 @@
+extends layout
+
+mixin card(title, text, link)
+  .card
+    .card-body
+      h2.card-title= title
+      p.card-text= text
+      a.card-link(href=link class="btn btn-primary") Link 
+
+block content
+  .row
+    .col
+      h1 BPA SPFx
+    .col
+      b #{user.name}
+      |  | 
+      a(href="http://lm-bpa-spfx.westeurope.cloudapp.azure.com:9000/account/") profile
+      |  | 
+      a(href="/logout") logout  
+  if(user.dev)
+    .row
+      .col
+        +card('Storybook', 'User Interface demonstration', '/story')      
+      .col
+        +card('Generated docs', 'Generated docs from source codes', '/docs')  
+    .row
+      .col
+        +card('Code Coverage', 'Code covered by Jest Unit Tests', '/coverage')  
+      .col
+        +card('SonarQube', 'SonarQube Source Analyser', 'http://lm-bpa-spfx.westeurope.cloudapp.azure.com:9000')  
+  else
+    .row
+      .col
+        +card('Storybook', 'User Interface demonstration', '/story')  

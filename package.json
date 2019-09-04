@@ -1,0 +1,31 @@
+{
+  "name": "ci-server",
+  "description": "BPA SPFx CI Web Server",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=10.16.0"
+  },
+  "scripts": {
+    "build": "set PORT=3000&&set DEV=true&&node ./bin/www",
+    "start": "node ./service/start",
+    "stop": "node ./service/stop"
+  },
+  "dependencies": {
+    "connect-pg-simple": "^6.0.1",
+    "dotenv": "^8.0.0",
+    "express": "~4.16.1",
+    "express-session": "^1.16.2",
+    "http-errors": "~1.6.3",
+    "node-windows": "^0.1.14",
+    "pg": "^7.12.0",
+    "pug": "^2.0.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "debug": "~2.6.9",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}

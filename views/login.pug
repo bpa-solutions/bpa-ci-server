@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    if(message)
+        h4 #{message}
+    form(action = "/login" method = "POST")
+        .form-group
+            input.form-control(name = "id" type = "text" required placeholder = "Username")
+        .form-group
+            input.form-control(name = "password" type = "password" required placeholder = "Password")            
+        button(type = "Submit" class = "btn btn-primary") Log in
