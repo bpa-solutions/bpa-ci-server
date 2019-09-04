@@ -14,9 +14,11 @@ let { log, warn } = console;
 if (process.env.IS_SERVICE) {
   // eslint-disable-next-line global-require
   const { EventLogger } = require('node-windows');
-  const el = new EventLogger(process.env.SERVICE_NAME);
+  const el = new EventLogger({
+    source: process.env.SERVICE_NAME
+  });
 
-  log = el.log;
+  log = el.info;
   warn = el.warn;
 }
 

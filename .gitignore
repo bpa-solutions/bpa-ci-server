@@ -2,3 +2,4 @@ bin/daemon
 node_modules
 static/*
 .env
+.scannerwork
