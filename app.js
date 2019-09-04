@@ -65,7 +65,7 @@ function checkSignIn(req, res, next) {
 }
 
 app.get('/', checkSignIn, (req, res) => {
-  res.render('index', { user: req.session.user });
+  res.render('index', { user: req.session.user, sonar: process.env.SONAR_PUBLIC_URL });
 });
 
 app.get('/login', (_, res) => {

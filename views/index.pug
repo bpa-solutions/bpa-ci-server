@@ -14,7 +14,7 @@ block content
     .col
       b #{user.name}
       |  | 
-      a(href="http://lm-bpa-spfx.westeurope.cloudapp.azure.com:9000/account/") profile
+      a(href=sonar+"/account/") profile
       |  | 
       a(href="/logout") logout  
   if(user.dev)
@@ -27,7 +27,7 @@ block content
       .col
         +card('Code Coverage', 'Code covered by Jest Unit Tests', '/coverage')  
       .col
-        +card('SonarQube', 'SonarQube Source Analyser', 'http://lm-bpa-spfx.westeurope.cloudapp.azure.com:9000')  
+        +card('SonarQube', 'SonarQube Source Analyser', sonar)  
   else
     .row
       .col
